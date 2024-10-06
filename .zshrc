@@ -64,6 +64,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='ls --color'
+alias cat='bat -p'
 alias vim='nvim'
 alias python='python3'
 alias c='clear'
@@ -86,3 +87,4 @@ eval "$(pyenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export PI25_MAC=e4:5f:01:f4:59:00
