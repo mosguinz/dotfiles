@@ -1,4 +1,6 @@
+# Load autocompletions
 autoload -Uz compinit && compinit
+
 alias gptk='gameportingtoolkit'
 # Auto-switch brew versions
 if [ "$(arch)" = "arm64" ]; then
@@ -85,6 +87,26 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# Docker
+fpath=(~/.docker/completions \\$fpath)
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# iTerm
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PI25_MAC=e4:5f:01:f4:59:00
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# fnm
+eval "$(fnm env --use-on-cd --shell zsh)"
+FNM_PATH="/Users/mosguinz/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/mosguinz/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
