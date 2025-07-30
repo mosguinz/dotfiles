@@ -15,18 +15,11 @@ lspconfig.ts_ls.setup {
   }
 }
 
-lspconfig.ruff.setup({
+lspconfig.pyright.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = {"python"}
 })
-
-
--- lspconfig.pyright.setup({
---     on_attach = on_attach,
---     capabilities = capabilities,
---     filetypes = {"python"}
--- })
 
 -- lspconfig.biome.setup {
 --   on_attach = on_attach,

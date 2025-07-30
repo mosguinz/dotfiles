@@ -16,12 +16,20 @@ local biomeConfig = function ()
   }
 end
 
+local ruffConfig = function ()
+  return {
+    exe = "ruff",
+    args = { "format" }
+  }
+end
+
 local M = {
   filetype = {
     typescript = { biomeConfig },
     typescriptreact = { biomeConfig },
     javascript = { biomeConfig },
     javascriptreact = { biomeConfig },
+    python = { ruffConfig },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace
     }

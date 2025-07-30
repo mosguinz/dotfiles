@@ -6,7 +6,7 @@ local plugins = {
         "typescript-language-server",
         "biome",
         "js-debug-adapter",
-        -- "pyright",
+        "pyright",
         "ruff"
       }
     }
