@@ -6,6 +6,7 @@ local plugins = {
         "typescript-language-server",
         "biome",
         "js-debug-adapter",
+        "pyright",
       }
     }
   },
@@ -32,6 +33,11 @@ local plugins = {
     opts = function ()
       return require "custom.configs.formatter"
     end
+  },
+  -- tmux keybinds
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
   },
   -- DAP
   -- {
