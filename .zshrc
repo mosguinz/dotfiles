@@ -110,3 +110,6 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/Users/mosguinz/Library/Application Support/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+# uv
+eval "$(uv generate-shell-completion zsh)"
